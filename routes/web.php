@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\NavController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Routing-Navbar
+
+Route::get('/', [NavController::class, 'home'])->name('home');
+Route::get('/contact', [NavController::class, 'contact'])->name('contact');
+Route::get('/blog', [BlogController::class, 'showBlog'])->name('showBlog');
