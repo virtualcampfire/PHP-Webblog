@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteRule ^home/?$ index.php [L]
+RewriteRule ^contact/?$ index.php [L]
+RewriteRule ^blog/?$ index.php [L]
+RewriteRule ^/?$ index.php [L]
+
+RewriteRule ^home\.html$ /blog [R=301,L]
+RewriteRule ^contact\.html$ /blog [R=301,L]
+RewriteRule ^blog\.html$ /blog [R=301,L]
