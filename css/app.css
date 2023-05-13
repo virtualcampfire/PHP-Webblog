@@ -247,3 +247,61 @@ a{
     z-index: 1;
     display: none;
   }
+
+  .blog-container{
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .blog-entry{
+    position: relative;
+    width: 80%;
+    min-height: 400px;
+    background-color: #1a335c;
+    border-style: solid;
+    border-radius: 16px;
+    border-color: #1a335c;
+  }
+
+  .blog-title{
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    text-decoration: underline;
+  }
+  .blog-img{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .blog-img-element{
+    border-style: solid;
+    border-radius: 15px;
+    border-color: rgba(255, 255, 255, 0);
+    width: 90%;
+  }
+  .blog-text-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .blog-text{
+    text-align: center;
+    margin-top: 30px;
+    width: 90%;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  @media only screen and (min-width: 1000px) {
+    .blog-entry{
+        max-width: 1200px;
+    } 
+}
