@@ -32,7 +32,7 @@ try {
         SELECT id FROM user WHERE name = '$userName'
         );";
     $db->exec($sql);
-
+ 
     echo "Connected and migration successfully";
 
 } catch(PDOException $e) {
