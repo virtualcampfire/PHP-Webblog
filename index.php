@@ -1,5 +1,14 @@
 <?php
 
+if(isset($_SESSION['loggedIn'])){
+    if($_SESSION['loggedIn'] == true){
+        echo "Willkommen als Admin";
+    }
+    else{
+        echo $_SESSION['loggedIn'];
+    }
+}
+
 $request_uri = $_SERVER['REQUEST_URI'];
 
 if ($request_uri === '/' || $request_uri === ''|| $request_uri === '/home' || $request_uri === '/home/') {
