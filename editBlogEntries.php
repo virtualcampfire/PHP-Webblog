@@ -1,5 +1,4 @@
 <?php
-include('loginWatcher.php');
 include('admin.php');
 include('config.php');
 $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -36,7 +35,8 @@ foreach ($blogEntries as $entry) {
     </table>
     <script>
         function bearbeiten(id){
-            console.log(id);
+            var url = "editBlogEntry.php?id=" + encodeURIComponent(id);
+            window.location.href = url;
         }
     </script>
     <style>

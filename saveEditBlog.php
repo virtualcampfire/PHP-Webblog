@@ -1,18 +1,17 @@
 <?php
+$id = $_POST['id'];
 $title = $_POST['title'];
 $text = $_POST['text'];
 $image = $_FILES['image'];
 
 if (!empty($title) && !empty($text) && $image['error'] === 0) {
     $uploadDir = 'blogImgs/';
-    $imageExtension = pathinfo($image['name'], PATHINFO_EXTENSION);
-    $uniqueFileName = uniqid() . '.' . $imageExtension;
-    $uploadedFilePath = $uploadDir . $uniqueFileName;
-    
+    $uploadedFilePath = $uploadDir . basename($image['name']);
+
     if (move_uploaded_file($image['tmp_name'], $uploadedFilePath)) {
         include('config.php');
         $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        $sql = "INSERT INTO blog (title, text, img_path) VALUES ('$title', '$text', '$uploadedFilePath')";
+        $sql = "UPDATE blog SET title = '$title', text = '$text', img_path = '$uploadedFilePath' WHERE id = '$id'";
         $db->exec($sql);
         header('Location: admin.php');
         exit;
