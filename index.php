@@ -22,8 +22,7 @@ else if($request_uri === '/blog' || $request_uri === '/blog/'){
     header('Content-Type: text/html');
     $html = file_get_contents('navbar.html');
     echo $html;
-    $html = file_get_contents('blog.html');
-    echo $html;
+    include('blog.php');
 }
 else if($request_uri === '/contact' || $request_uri === '/contact/'){
     header('Content-Type: text/html');
