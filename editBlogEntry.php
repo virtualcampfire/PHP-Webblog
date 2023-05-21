@@ -11,16 +11,34 @@ $title = $blogEntry['title'];
 $text = $blogEntry['text'];
 $imagePath = $blogEntry['img_path'];
 
-echo "<form action='saveEditBlog.php' method='POST' enctype='multipart/form-data'>";
-echo "<input type='hidden' name='id' value='$id'>";
-echo "<input type='text' name='title' value='$title'>";
-echo "<textarea name='text'>$text</textarea>";
-echo "<img src='$imagePath' alt='Blog Image'>";
-echo "<input type='file' name='image'>";
-echo "<button type='submit'>Save Changes</button>";
-echo "</form>";
 
-echo "<form action='deleteBlogEntry.php' method='POST'>";
-echo "<input type='hidden' name='id' value='$id'>";
-echo "<button type='submit'>Delete Blog-Entry</button>";
-echo "</form>";
+$html = "
+    <div class='container'> 
+        <form action='saveEditBlog.php' method='POST' enctype='multipart/form-data'>
+            <input type='hidden' name='id' value='$id'>
+            <div class='mb-3'>
+                <label for='exampleFormControlInput1' class='form-label'>Titel</label>
+                <input type='text' name='title' class='form-control' id='exampleFormControlInput1' value='$title'>
+            </div>
+            <div style='display: flex; width: 100%; position: relative; justify-content: center;'>
+                <img src='$imagePath' alt='Blog Image' style='height: 400px'>
+            </div>
+            <div class='mb-3'>
+                <label for='formFile' class='form-label'>Bild</label>
+                <input class='form-control' type='file' id='formFile' name='image'>
+            </div>
+            <div class='mb-3'>
+                <label for='exampleFormControlTextarea1' class='form-label'>Text</label>
+                <textarea class='form-control' id='exampleFormControlTextarea1' name='text' rows='5'>$text</textarea>
+            </div>
+            <button type='submit' class='btn btn-success' style='width: 200px;'>Beitrag speichern</button>
+        </form>
+        <br>
+        <form action='deleteBlogEntry.php' method='POST'>
+            <input type='hidden' name='id' value='$id'>
+            <button type='submit' class='btn btn-danger' style='width: 200px;'>Löschen</button>
+        </form>
+    </div>
+";
+
+echo $html;
