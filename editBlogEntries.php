@@ -7,7 +7,8 @@ $result = $db->query($sql);
 $blogEntries = $result->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-    <table>
+    <div class="container">
+    <table class="table table-striped">
         <tr>
             <td><strong>Titel</strong></td>
             <td><strong>Text</strong></td>
@@ -33,6 +34,7 @@ foreach ($blogEntries as $entry) {
 }
 ?>
     </table>
+    </div>
     <script>
         function bearbeiten(id){
             var url = "editBlogEntry.php?id=" + encodeURIComponent(id);
@@ -42,12 +44,6 @@ foreach ($blogEntries as $entry) {
     <style>
         img{
             height: 60px;
-        }
-        table{
-            border-style: solid;
-        }
-        td{
-            border-style: solid;
         }
     </style>
 
