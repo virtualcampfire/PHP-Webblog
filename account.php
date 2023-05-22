@@ -26,7 +26,11 @@ include('admin.php');
                         <label for="exampleFormControlInput3" class="form-label">Password bestätigen</label>
                         <input type="password" name="pw2" class="form-control" id="exampleFormControlInput3">
                     </div>
-                    <button type="submit" class="btn btn-success">Einstellung Speichern</button>
+                    <button type="submit" class="btn btn-success" style="width: 200px;">Einstellung Speichern</button>
+                </form>
+                <br>
+                <form action="logout.php" method="POST">
+                    <button type="submit" class="btn btn-warning" style="width: 200px;">Logout</button>
                 </form>
             </div>
             </body>
