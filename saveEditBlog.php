@@ -8,7 +8,7 @@ $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
 if(!empty($title)){
     $sql = "UPDATE blog SET title = '$title' WHERE id = '$id'";
-        $db->exec($sql);
+    $db->exec($sql);
 }
 if(!empty($text)){
     $sql = "UPDATE blog SET text = '$text' WHERE id = '$id'";
