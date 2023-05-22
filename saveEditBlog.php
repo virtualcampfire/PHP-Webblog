@@ -1,4 +1,5 @@
 <?php
+include('admin.php');
 $id = $_POST['id'];
 $title = $_POST['title'];
 $text = $_POST['text'];
