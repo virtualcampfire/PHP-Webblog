@@ -9,6 +9,7 @@ $blogEntry = $result->fetch(PDO::FETCH_ASSOC);
 $id = $blogEntry['id'];
 $title = $blogEntry['title'];
 $text = $blogEntry['text'];
+$category = $blogEntry['category'];
 $imagePath = $blogEntry['img_path'];
 
 
@@ -19,6 +20,10 @@ $html = "
             <div class='mb-3'>
                 <label for='exampleFormControlInput1' class='form-label'>Titel</label>
                 <input type='text' name='title' class='form-control' id='exampleFormControlInput1' value='$title'>
+            </div>
+            <div class='mb-3'>
+                <label for='exampleFormControlInput2' class='form-label'>Kategorie</label>
+                <input type='text' name='category' class='form-control' id='exampleFormControlInput2' value='$category'>
             </div>
             <div style='display: flex; width: 100%; position: relative; justify-content: center;'>
                 <img src='$imagePath' alt='Blog Image' style='height: 400px'>

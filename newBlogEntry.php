@@ -18,6 +18,10 @@ include('admin.php');
                         <input type="text" name="title" class="form-control" id="exampleFormControlInput1">
                     </div>
                     <div class="mb-3">
+                        <label for="exampleFormControlInput2" class="form-label">Kategorie</label>
+                        <input type="text" name="category" class="form-control" id="exampleFormControlInput2">
+                    </div>
+                    <div class="mb-3">
                         <label for="formFile" class="form-label">Bild</label>
                         <input class="form-control" type="file" id="formFile" name="image">
                     </div>
