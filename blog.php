@@ -15,6 +15,17 @@ $blogEntries = $result->fetchAll(PDO::FETCH_ASSOC);
     <title>Blog</title>
 </head>
 <body>
+    <div class='blog-container'>
+        <div class="categories">
+            <?php
+                $uniqueCategories = array_unique(array_column($blogEntries, 'category'));
+                foreach ($uniqueCategories as $category) {
+                    echo '<div class="category" onclick=sortCategory(' . '"' .$category . '"' . ')>' . $category . '</div>';
+                }
+            ?>
+        </div>
+    </div>
+
     <?php
         foreach ($blogEntries as $entry) {
             $id = $entry['id'];
@@ -22,17 +33,32 @@ $blogEntries = $result->fetchAll(PDO::FETCH_ASSOC);
             $text = $entry['text'];
             $imagePath = $entry['img_path'];
 
-            echo "<div class='blog-container'>";
-                echo "<div class='blog-entry'>";
-                    echo "<div class='blog-title'>$title</div>";
-                    echo "<div class='blog-img'><img class='blog-img-element' src='$imagePath'></div>";
-                    echo "<div class='blog-text-container'><div class='blog-text'>$text</div></div>";
-                echo "</div>";
-            echo "</div>";
+            echo "<div class='blog-container'>
+                    <div class='blog-entry'>
+                        <div class='blog-title'>
+                            $title
+                        </div>
+                        <div class='blog-img'>
+                            <img class='blog-img-element' src='$imagePath'>
+                        </div>
+                        <div class='blog-text-container'>
+                            <div class='blog-text'>
+                                $text
+                            </div>
+                        </div>
+                    </div>
+                </div>";
         }
     ?>
     <br>
     <br>
     <br>
+    <script>
+        function sortCategory(category){
+            console.log(category)
+            // var url = "editBlogEntry.php?id=" + encodeURIComponent(id);
+            // window.location.href = url;
+        }
+    </script>
 </body>
 </html>

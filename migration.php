@@ -8,6 +8,7 @@ try {
     $sql = "CREATE TABLE IF NOT EXISTS blog (
         id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         title VARCHAR(255) NOT NULL,
+        category VARCHAR(255) NOT NULL,
         img_path VARCHAR(255) NOT NULL,
         text TEXT NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -22,6 +23,7 @@ try {
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )";
     $db->exec($sql);
+
 
     // Adding a basic Admin
     $userPassword = password_hash($userPassword, PASSWORD_DEFAULT);

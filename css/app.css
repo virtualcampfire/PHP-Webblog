@@ -307,3 +307,20 @@ a{
         max-width: 1200px;
     } 
 }
+
+.categories{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category{
+    margin: 20px;
+    background-color: #1a335c;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 10px;
+}

@@ -4,11 +4,16 @@ $id = $_POST['id'];
 $title = $_POST['title'];
 $text = $_POST['text'];
 $image = $_FILES['image'];
+$category = $_POST['category'];
 include('config.php');
 $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
 if(!empty($title)){
     $sql = "UPDATE blog SET title = '$title' WHERE id = '$id'";
+    $db->exec($sql);
+}
+if(!empty($category)){
+    $sql = "UPDATE blog SET category = '$category' WHERE id = '$id'";
     $db->exec($sql);
 }
 if(!empty($text)){
@@ -27,4 +32,4 @@ if(pathinfo($image['name'], PATHINFO_EXTENSION) !== '' && pathinfo($image['name'
         }
 }
 header('Location: admin.php');
-        exit;
+exit;

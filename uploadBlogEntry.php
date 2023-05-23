@@ -1,7 +1,9 @@
 <?php
+include('admin.php');
 $title = $_POST['title'];
 $text = $_POST['text'];
 $image = $_FILES['image'];
+$category = $_POST['category'];
 
 if (!empty($title) && !empty($text) && $image['error'] === 0) {
     $uploadDir = 'blogImgs/';
@@ -12,7 +14,7 @@ if (!empty($title) && !empty($text) && $image['error'] === 0) {
     if (move_uploaded_file($image['tmp_name'], $uploadedFilePath)) {
         include('config.php');
         $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        $sql = "INSERT INTO blog (title, text, img_path) VALUES ('$title', '$text', '$uploadedFilePath')";
+        $sql = "INSERT INTO blog (title, text, img_path, category) VALUES ('$title', '$text', '$uploadedFilePath', '$category')";
         $db->exec($sql);
         header('Location: admin.php');
         exit;
