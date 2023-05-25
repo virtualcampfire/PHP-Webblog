@@ -1,6 +1,4 @@
-<?php
-include('loginWatcher.php');
-        ?>
+<?php include('loginWatcher.php'); ?>
             <!DOCTYPE html>
             <html lang="en">
                 <head>
@@ -11,19 +9,27 @@ include('loginWatcher.php');
                     <title>Admin</title>
                 </head>
                 <body>
-                    <input type="button" value="Neuer Beitrag" onclick="redirectToNewBlogEntry()">
-                    <input type="button" value="Beitrag Bearbeiten" onclick="redirectToEditBlogEntry()">
-                    <input type="button" value="Account verwalten" onclick="redirectToAccount()">
-                    <script>
-                        function redirectToNewBlogEntry() {
-                            window.location.href = "newBlogEntry.php";
-                        }
-                        function redirectToEditBlogEntry() {
-                            window.location.href = "editBlogEntries.php";
-                        }
-                        function redirectToAccount() {
-                            window.location.href = "account.php";
-                        }
-                    </script>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="/">TCS Admin</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="newBlogEntry.php">Neuer Beitrag</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="editBlogEntries.php">Beitrag Bearbeiten</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="account.php">Account verwalten</a>
+                            </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </body>
             </html>
+
+
