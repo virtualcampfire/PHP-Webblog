@@ -1,9 +1,14 @@
 <?php
 include('config.php');
+include('navbar.html');
+$category = $_GET['category'];
 $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-$sql = "SELECT * FROM blog";
+$sql = "SELECT * FROM blog WHERE category = '$category'";
 $result = $db->query($sql);
 $blogEntries = $result->fetchAll(PDO::FETCH_ASSOC);
+$sql = "SELECT * FROM blog";
+$result = $db->query($sql);
+$blogEntriesCategory = $result->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +23,7 @@ $blogEntries = $result->fetchAll(PDO::FETCH_ASSOC);
     <div class='blog-container'>
         <div class="categories">
             <?php
-                $uniqueCategories = array_unique(array_column($blogEntries, 'category'));
+                $uniqueCategories = array_unique(array_column($blogEntriesCategory, 'category'));
                 foreach ($uniqueCategories as $category) {
                     echo '<div class="category" onclick=sortCategory(' . '"' .$category . '"' . ')>' . $category . '</div>';
                 }
