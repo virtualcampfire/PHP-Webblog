@@ -1,6 +1,6 @@
 <?php
 include('config.php');
-include('navbar.html');
+include('navbar.php');
 $category = $_GET['category'];
 $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 $sql = "SELECT * FROM blog WHERE category = '$category'";
