@@ -19,6 +19,7 @@ $blogEntries = $result->fetchAll(PDO::FETCH_ASSOC);
         <div class="categories">
             <?php
                 $uniqueCategories = array_unique(array_column($blogEntries, 'category'));
+                echo '<div class="category" onclick=sortCategory(' . '"' . 'Alle' . '"' . ')>' . 'Alle' . '</div>';
                 foreach ($uniqueCategories as $category) {
                     echo '<div class="category" onclick=sortCategory(' . '"' .$category . '"' . ')>' . $category . '</div>';
                 }

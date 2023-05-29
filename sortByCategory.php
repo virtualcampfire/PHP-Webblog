@@ -3,7 +3,12 @@ include('config.php');
 include('navbar.php');
 $category = $_GET['category'];
 $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-$sql = "SELECT * FROM blog WHERE category = '$category'";
+if($category == "Alle"){
+    $sql = "SELECT * FROM blog";
+}
+else{
+    $sql = "SELECT * FROM blog WHERE category = '$category'";
+}
 $result = $db->query($sql);
 $blogEntries = $result->fetchAll(PDO::FETCH_ASSOC);
 $sql = "SELECT * FROM blog";
@@ -24,6 +29,7 @@ $blogEntriesCategory = $result->fetchAll(PDO::FETCH_ASSOC);
         <div class="categories">
             <?php
                 $uniqueCategories = array_unique(array_column($blogEntriesCategory, 'category'));
+                echo '<div class="category" onclick=sortCategory(' . '"' . 'Alle' . '"' . ')>' . 'Alle' . '</div>';
                 foreach ($uniqueCategories as $category) {
                     echo '<div class="category" onclick=sortCategory(' . '"' .$category . '"' . ')>' . $category . '</div>';
                 }
