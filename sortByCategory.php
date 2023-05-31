@@ -25,7 +25,7 @@ $blogEntriesCategory = $result->fetchAll(PDO::FETCH_ASSOC);
     <title>Blog</title>
 </head>
 <body>
-    <div class='blog-container'>
+    <div class='blog-container' style='width: 100%'>
         <div class="categories">
             <?php
                 $uniqueCategories = array_unique(array_column($blogEntriesCategory, 'category'));
@@ -40,14 +40,21 @@ $blogEntriesCategory = $result->fetchAll(PDO::FETCH_ASSOC);
     <?php
         foreach ($blogEntries as $entry) {
             $id = $entry['id'];
+            $created = $entry['created_at'];
+            $created = new DateTime($created);
+            $created = $created->format("d/m/Y");
             $title = $entry['title'];
             $text = $entry['text'];
             $imagePath = $entry['img_path'];
+            $text = strlen($text) > 200 ? substr($text, 0, 200) . "..." : $text;
 
             echo "<div class='blog-container'>
-                    <div class='blog-entry'>
+                    <div class='blog-entry' onclick=showBlogEntry('$id')>
+                        <div class='created'>
+                            $created
+                        </div>
                         <div class='blog-title'>
-                            $title
+                            <div>$title</div>
                         </div>
                         <div class='blog-img'>
                             <img class='blog-img-element' src='$imagePath'>
@@ -66,8 +73,12 @@ $blogEntriesCategory = $result->fetchAll(PDO::FETCH_ASSOC);
     <br>
     <script>
         function sortCategory(category){
-            var url = "sortByCategory.php?category=" + encodeURIComponent(category);
-            window.location.href = url;
+            var url = "sortByCategory.php?category=" + encodeURIComponent(category)
+            window.location.href = url
+        }
+        function showBlogEntry(id){
+            var url = "showBlogEntry.php?id=" + encodeURIComponent(id)
+            window.location.href = url
         }
     </script>
 </body>

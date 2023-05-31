@@ -19,8 +19,8 @@ $mainText = "
             Hallo, ich bin Elias,
             <br>
             jemand, der sich für die Bereiche <a class='hervorheben'>Technik</a>, <a class='hervorheben'>Wirtschaft</a>
-            und <a class='hervorheben'>Psychologie</a> interessiert. Mit Leidenschaft tauche
-            ich in die Welt neuer Ergebnisse ein und versuche ständig, meine Fähigkeiten zu erweitern und mich selbst
+            und <a class='hervorheben'>Psychologie</a> interessiert. Ich versuche ständig, meine Fähigkeiten zu erweitern und 
+            mich selbst
             zu verbessern. Ich bin überzeugt davon, dass Technologie eine entscheidende Rolle in unserer <a class='hervorheben'>Zukunft</a>
             spielen wird und diese möchte gerne mitzugestalten. Ich bin immer auf der Suche nach neuen <a class='hervorheben'>Herausforderungen</a> und
             <a class='hervorheben'>Möglichkeiten</a>, meinen Horizont zu erweitern und mein Wissen zu vertiefen.
@@ -37,7 +37,7 @@ $contact = "
     <a class='willkommen'>Kontaktieren Sie mich!</a>
     <br>
     <br>
-    Vielen Dank für Ihr Interesse an CodingSpace. Wenn Sie Fragen, Ideen oder Anliegen haben oder einfach nur mit mir in Kontakt treten möchten, stehe ich Ihnen gerne zur Verfügung. Bitte zögern Sie nicht, mich über die folgende E-Mail-Adresse zu erreichen:
+    Vielen Dank für Ihr Interesse an TheCodingSpace. Wenn Sie Fragen, Ideen oder Anliegen haben oder einfach nur mit mir in Kontakt treten möchten, stehe ich Ihnen gerne zur Verfügung. Bitte zögern Sie nicht, mich über die folgende E-Mail-Adresse zu erreichen:
     <br>
     <br>
     <a class='hervorheben'>E-Mail: <a class='hervorheben' href='mailto:$mail'>$mailToText</a></a>
