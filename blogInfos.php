@@ -31,3 +31,25 @@ $conection = "Sie haben Fragen, Ideen und möchten sich mit mir in Verbindung se
 $mailToText = "kontakt@thecodingspace.de";
 $mail = "kontakt@thecodingspace.de";
 
+// contact-text 
+
+$contact = "
+    <a class='willkommen'>Kontaktieren Sie mich!</a>
+    <br>
+    <br>
+    Vielen Dank für Ihr Interesse an CodingSpace. Wenn Sie Fragen, Ideen oder Anliegen haben oder einfach nur mit mir in Kontakt treten möchten, stehe ich Ihnen gerne zur Verfügung. Bitte zögern Sie nicht, mich über die folgende E-Mail-Adresse zu erreichen:
+    <br>
+    <br>
+    <a class='hervorheben'>E-Mail: <a class='hervorheben' href='mailto:$mail'>$mailToText</a></a>
+    <br>        
+    <br>
+    Ich bemühe mich, auf Ihre Anfragen so schnell wie möglich zu antworten. Bitte haben Sie jedoch Verständnis, dass es je nach Arbeitsaufkommen und Zeitzone zu Verzögerungen kommen kann. Ihre Geduld wird sehr geschätzt.
+    <br>
+    <br>
+    Ich freue mich darauf, von Ihnen zu hören und Ihnen bei Ihren Anliegen behilflich zu sein!
+    <br>
+    <br>
+    Mit freundlichen Grüßen,
+    <br>
+    TheCodingSpace
+";

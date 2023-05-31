@@ -24,8 +24,7 @@ else if($request_uri === '/blog' || $request_uri === '/blog/'){
 else if($request_uri === '/contact' || $request_uri === '/contact/'){
     header('Content-Type: text/html');
     include('navbar.php');
-    $html = file_get_contents('contact.html');
-    echo $html;
+    include('contact.php');
 
 }
 else {
