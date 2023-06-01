@@ -54,4 +54,11 @@ function goToBlog(){
     window.location.href = url
 }
 </script>
-</div>";
+</div>
+<br>
+<br>
+<br>
+";
+
+include('impressumElement.php');
+?>

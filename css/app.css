@@ -117,7 +117,7 @@ a{
     text-decoration-line: underline;  
 }
 .content-container{
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 .content-container-element-img{
@@ -312,6 +312,9 @@ a{
     .blog-entry{
         max-width: 1200px;
     } 
+    .impressum{
+        max-width: 1200px;
+    }
 }
 
 .categories{
@@ -334,4 +337,17 @@ a{
     text-align: end;
     margin-right: 10px;
     margin-top: 10px;
+}
+.impressum{
+    position: relative; 
+    width: 80%; 
+    text-align: center; 
+    padding-top: 50px; 
+    padding-bottom: 50px;
+    border-style: dashed;
+    top: -20px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-color: #1a335c;;
 }
