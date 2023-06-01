@@ -11,7 +11,7 @@ echo "
     </head>
     <body>
         <div style='position: relative; width: 100%; display: flex; justify-content: center;'>
-            <div style='margin-top: 160px; width: 80%;' class='content-element-text'>
+            <div style='margin-top: 100px; width: 80%;' class='content-element-text'>
                 $contact
             </div>
         </div>

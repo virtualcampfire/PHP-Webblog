@@ -83,3 +83,7 @@ $blogEntriesCategory = $result->fetchAll(PDO::FETCH_ASSOC);
     </script>
 </body>
 </html>
+
+<?php
+include('impressumElement.php');
+?>

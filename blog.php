@@ -75,3 +75,7 @@ $blogEntries = $result->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </body>
 </html>
+
+<?php
+include('impressumElement.php');
+?>
