@@ -36,6 +36,7 @@ try {
     $db->exec($sql);
  
     echo "Connected and migration successfully";
+    unlink('migration.php');
 
 } catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
