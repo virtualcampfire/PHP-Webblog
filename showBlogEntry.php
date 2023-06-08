@@ -1,6 +1,6 @@
 <?php
-include('config.php');
 include('navbar.php');
+include('config.php');
 
 $id = $_GET['id'];
 $id = $_GET['id'];
@@ -30,8 +30,18 @@ $created = $blogEntry['created_at'];
 $created = new DateTime($created);
 $created = $created->format("d/m/Y");
 
+
+?>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blogbeitrag</title>
+    </head>
+<?php
+
 echo "<div class='blog-container'>
-<div class='blog-entry' style='cursor: default'>
+<div class='blog-entry' style='cursor: default; width: 100%; background-color: rgb(21 38 66); border-color: rgb(21 38 66);'>
     <div class='created'>
         $created
     </div>
@@ -42,12 +52,13 @@ echo "<div class='blog-container'>
         <img class='blog-img-element' src='$imagePath'>
     </div>
     <div class='blog-text-container'>
-        <div class='blog-text'>
+        <div class='blog-text' style='width: 95%'>
             $text
         </div>
     </div>
-    <div style='text-align: end; positon: relative; margin-right: 40px; cursor: pointer;' onclick=goToBlog()>Zurück</div>
-</div>
+    <div>
+        <a style='positon: relative; margin-left: 40px; cursor: pointer; text-decoration: underline;' onclick=goToBlog()>Zurück</a></div>
+    </div>
 <script>
 function goToBlog(){
     var url = '/blog'
