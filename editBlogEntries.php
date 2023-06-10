@@ -8,7 +8,7 @@ $blogEntries = $result->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
     <div class="container">
-    <table class="table table-striped">
+    <table class="table" style="color: white">
         <tr>
             <td><strong>Titel</strong></td>
             <td><strong>Text</strong></td>
