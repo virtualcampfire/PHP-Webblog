@@ -12,7 +12,7 @@
 
 5. Access www.your-domain.com/migration.php in your web browser.
 
-6. Once the migration is complete, delete the migration.php file from the web server.
+6. Once the migration is complete, the migration.php file deletes itself from from the web server.
 
 7. Go to www.your-domain.com/login.php in your web browser and log in with the default username and password. Then, change the login credentials under the "Settings" section.
 
