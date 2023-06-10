@@ -9,26 +9,55 @@
                     <title>Admin</title>
                 </head>
                 <body>
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <a class="navbar-brand" href="/">TCS Admin</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="newBlogEntry.php">Neuer Beitrag</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="editBlogEntries.php">Beitrag Bearbeiten</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="account.php">Account verwalten</a>
-                            </li>
-                            </ul>
+                <?php
+                    include('blogInfos.php');
+                    echo "
+                        <link rel='stylesheet' href='css/app.css'>
+                        <div id='fullscreen-overlay'></div>
+                        <div class='navbar'>
+                            <div class='nav-left'>
+                                <div class='nav-name-container'>
+                                    <a class='nav-name' href='/home'>$name</a>
+                                    <a class='nav-name-hidden' href='/home'>$shortName</a>
+                                </div>
+                            </div>
+                            <div class='nav-right'>
+                                <a class='nav-right-elements' href='newBlogEntry.php'>Neuer Beitrag</a>
+                                <a class='nav-right-elements' href='editBlogEntries.php'>Beitrag Bearbeiten</a>
+                                <a class='nav-right-elements' href='account.php'>Account verwalten</a>
+                            </div>
+                            <div class='nav-right-elements-close'>
+                                <div class='dropdown' onclick='showMenu()'>
+                                    <img class='nav-img' src='imgs/menu.png'>
+                                    <div id='dropdown-content'>
+                                        <a class='dropdown-element' href='newBlogEntry.php'>Neuer Beitrag</a>br>
+                                        <a class='dropdown-element' href='editBlogEntries.php'>Beitrag Bearbeiten</a><br>
+                                        <a class='dropdown-element' href='account.php'>Account verwalten</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </nav>
+                        <script>
+                            let i = 0;
+                            function showMenu(){
+                                if(i == 0){
+                                    document.getElementById('dropdown-content').style.display = 'block';
+                                    document.getElementById('fullscreen-overlay').style.display = 'block';
+                                    i = 1;
+                                }
+                                else{
+                                    document.getElementById('dropdown-content').style.display = 'none';
+                                    document.getElementById('fullscreen-overlay').style.display = 'none';
+                                    i = 0;
+                                }
+                            }
+                            const body = document.getElementById('fullscreen-overlay');
+                            body.addEventListener('click', function(event) {
+                                document.getElementById('dropdown-content').style.display = 'none';
+                            });
+                        </script>
+                    ";
+                ?>
                 </body>
             </html>
 
