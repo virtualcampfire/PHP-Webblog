@@ -15,6 +15,7 @@ $imagePath = $blogEntry['img_path'];
 
 $html = "
     <div class='container'> 
+    <div>
         <form action='saveEditBlog.php' method='POST' enctype='multipart/form-data'>
             <input type='hidden' name='id' value='$id'>
             <div class='mb-3'>
@@ -39,11 +40,11 @@ $html = "
             <button type='submit' class='btn btn-success' style='width: 200px;'>Beitrag speichern</button>
         </form>
         <br>
-        <br>
         <form action='deleteBlogEntry.php' method='POST'>
             <input type='hidden' name='id' value='$id'>
             <button type='submit' class='btn btn-danger' style='width: 200px;'>Löschen</button>
         </form>
+        </div>
     </div>
 ";
 
