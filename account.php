@@ -10,29 +10,34 @@ include('admin.php');
                 <title>Account</title>
             </head>
             <body>
-                <br>
-                <div class="container">
-                <br>
-                <form action="saveSettings.php" method="POST">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Nutzername</label>
-                        <input type="text" name="name" class="form-control" id="exampleFormControlInput1">
+                <div class="blog-container">
+                    <div class="center-container">
+                        <form action="saveSettings.php" method="POST">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="input-label">Nutzername</label>
+                                <input type="text" name="name" class="input" id="exampleFormControlInput1">
+                            </div>
+                            <br>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput2" class="input-label">Password</label>
+                                <input type="password" name="pw1" class="input" id="exampleFormControlInput2">
+                            </div>
+                            <br>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput3" class="input-label">Password bestätigen</label>
+                                <input type="password" name="pw2" class="input" id="exampleFormControlInput3">
+                            </div>
+                            <br>
+                            <br>
+                            <button type="submit" class="button">Einstellung Speichern</button>
+                        </form> 
+                        <form action="logout.php" method="POST">
+                            <button type="submit" class="button">Logout</button>
+                        </form>
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput2" class="form-label">Password</label>
-                        <input type="password" name="pw1" class="form-control" id="exampleFormControlInput2">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput3" class="form-label">Password bestätigen</label>
-                        <input type="password" name="pw2" class="form-control" id="exampleFormControlInput3">
-                    </div>
-                    <button type="submit" class="btn btn-success" style="width: 200px;">Einstellung Speichern</button>
-                </form>
-                <br>
-                <form action="logout.php" method="POST">
-                    <button type="submit" class="btn btn-warning" style="width: 200px;">Logout</button>
-                </form>
-            </div>
+                </div>
             </body>
         </html> 
     <?php
+
+

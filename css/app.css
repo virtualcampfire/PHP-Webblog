@@ -167,7 +167,7 @@ a{
     from {
         transform: rotateY(90deg);
       }
-      to {
+    to {
         transform: rotateY(0deg);
       }
 }
@@ -176,7 +176,7 @@ a{
         max-width: 10px;
         opacity: 0%;
       }
-      to {
+    to {
         max-width: 1000px;
         opacity: 100%;
       }
@@ -184,6 +184,11 @@ a{
 
 .nav-right-elements-close{
     display: none;
+}
+
+.center-container{
+    position: relative; 
+    width: 60%;
 }
 
 
@@ -216,6 +221,9 @@ a{
     }
     .blog-img-element{
         width: 90%;
+    }
+    .center-container{ 
+        width: 95%;
     }
 }
 
@@ -365,6 +373,7 @@ a{
     width: 100%;
     border-radius: 15px;
     border-color: #ffffff00;
+    padding: 10px;
 }
 .button{
     position: relative;
