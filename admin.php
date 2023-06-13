@@ -1,4 +1,5 @@
-<?php include('loginWatcher.php');
+<?php
+include('loginWatcher.php');
 include('blogInfos.php');
 echo "
     <link rel='stylesheet' href='css/app.css'>
@@ -19,7 +20,7 @@ echo "
             <div class='dropdown' onclick='showMenu()'>
                 <img class='nav-img' src='imgs/menu.png'>
                 <div id='dropdown-content'>
-                    <a class='dropdown-element' href='newBlogEntry.php'>Neuer Beitrag</a>br>
+                    <a class='dropdown-element' href='newBlogEntry.php'>Neuer Beitrag</a><br>
                     <a class='dropdown-element' href='editBlogEntries.php'>Beitrag Bearbeiten</a><br>
                     <a class='dropdown-element' href='account.php'>Account verwalten</a>
                 </div>
@@ -46,5 +47,20 @@ echo "
         });
     </script>
 ";
+
+?>
+    <!DOCTYPE html>
+    <html lang="de">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Admin</title>
+        </head>
+        <body>
+            
+        </body>
+    </html> 
+<?php
 
 

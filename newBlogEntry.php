@@ -11,7 +11,7 @@ include('admin.php');
         </head>
         <body>
             <div class="blog-container">
-                <div style="position: relative; width: 60%">
+                <div class="center-container">
                     <br>
                     <form action="uploadBlogEntry.php" method="POST" enctype="multipart/form-data">
                         <br>    
@@ -32,7 +32,7 @@ include('admin.php');
                         <br>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="input-label">Text</label>
-                            <textarea class="input-text" id="exampleFormControlTextarea1"  name="text" rows="10"></textarea>
+                            <textarea class="input-text" id="exampleFormControlTextarea1"  name="text" rows="20"></textarea>
                         </div>
                         <br>
                         <button type="submit" class="button">Beitrag speichern</button>
