@@ -191,7 +191,19 @@ a{
     width: 60%;
 }
 
-
+.text-infos-none{
+    display: block;
+    width: 100%;
+}
+.text-infos-block{
+    display: none;
+    width: 100%;
+}
+.table{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 @media only screen and (max-width: 1000px) {
 	.nav-name-hidden{
@@ -224,6 +236,14 @@ a{
     }
     .center-container{ 
         width: 95%;
+    }
+    .text-infos-none{
+        display: none;
+        width: 100%;
+    }
+    .text-infos-block{
+        display: block;
+        width: 100%;
     }
 }
 
@@ -324,6 +344,9 @@ a{
     } 
     .impressum{
         max-width: 1200px;
+    }
+    .center-container{ 
+        width: 1200px;
     }
 }
 

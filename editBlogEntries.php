@@ -6,15 +6,18 @@ $sql = "SELECT * FROM blog";
 $result = $db->query($sql);
 $blogEntries = $result->fetchAll(PDO::FETCH_ASSOC);
 
+// PC-View
+
 ?>
-    <div class="container">
-    <table class="table" style="color: white">
-        <tr>
-            <td><strong>Titel</strong></td>
-            <td><strong>Text</strong></td>
-            <td><strong>Bild</strong></td>
-            <td><strong>Bearbeiten</strong></td>
-        </tr>
+    <div class="blog-container">
+            <div class="center-container text-infos-none">
+                <table class="table" style="color: white">
+                    <tr>
+                        <td><strong>Titel</strong></td>
+                        <td><strong>Text</strong></td>
+                        <td><strong>Bild</strong></td>
+                        <td><strong>Bearbeiten</strong></td>
+                    </tr>
 <?php
 
 foreach ($blogEntries as $entry) {
@@ -35,6 +38,40 @@ foreach ($blogEntries as $entry) {
 ?>
     </table>
     </div>
+    </div>
+
+    <?php
+
+// Mobile-View
+
+?>
+    <div class="blog-container">
+            <div class="center-container text-infos-block">
+                <table class="table" style="color: white">
+                    <tr>
+                        <td><strong>Titel</strong></td>
+                        <td><strong>Bearbeiten</strong></td>
+                    </tr>
+<?php
+
+foreach ($blogEntries as $entry) {
+    $id = $entry['id'];
+    $title = $entry['title'];
+
+    ?>
+        <tr>
+            <td><?php echo $title; ?></td>
+            <td><a onclick="bearbeiten(<?php echo $id;?>)">Bearbeiten</a></td>
+        </tr>
+    <?php
+}
+?>
+    </table>
+    </div>
+    </div>
+
+
+
     <script>
         function bearbeiten(id){
             var url = "editBlogEntry.php?id=" + encodeURIComponent(id);
