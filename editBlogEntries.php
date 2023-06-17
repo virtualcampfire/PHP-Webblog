@@ -14,6 +14,7 @@ $blogEntries = $result->fetchAll(PDO::FETCH_ASSOC);
                 <table class="table" style="color: white">
                     <tr>
                         <td><strong>Titel</strong></td>
+                        <td><strong>Kategorie</strong></td>
                         <td><strong>Text</strong></td>
                         <td><strong>Bild</strong></td>
                         <td><strong>Bearbeiten</strong></td>
@@ -24,11 +25,13 @@ foreach ($blogEntries as $entry) {
     $id = $entry['id'];
     $title = $entry['title'];
     $text = $entry['text'];
+    $category = $entry['category'];
     $imagePath = $entry['img_path'];
 
     ?>
         <tr>
             <td><?php echo $title; ?></td>
+            <td><?php echo $category; ?></td>
             <td><?php echo $text; ?></td>
             <td><?php echo "<img src='$imagePath' alt='Blog Entry Image'>"; ?></td>
             <td><a onclick="bearbeiten(<?php echo $id;?>)">Bearbeiten</a></td>
@@ -50,6 +53,7 @@ foreach ($blogEntries as $entry) {
                 <table class="table" style="color: white">
                     <tr>
                         <td><strong>Titel</strong></td>
+                        <td><strong>Kategorie</strong></td>
                         <td><strong>Bearbeiten</strong></td>
                     </tr>
 <?php
@@ -57,10 +61,12 @@ foreach ($blogEntries as $entry) {
 foreach ($blogEntries as $entry) {
     $id = $entry['id'];
     $title = $entry['title'];
+    $category = $entry['category'];
 
     ?>
         <tr>
             <td><?php echo $title; ?></td>
+            <td><?php echo $category; ?></td>
             <td><a onclick="bearbeiten(<?php echo $id;?>)">Bearbeiten</a></td>
         </tr>
     <?php
