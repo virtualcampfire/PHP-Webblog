@@ -50,7 +50,7 @@ foreach ($blogEntries as $entry) {
 ?>
     <div class="blog-container">
             <div class="center-container text-infos-block">
-                <table class="table" style="color: white">
+                <table class="table mobile" style="color: white">
                     <tr>
                         <td><strong>Titel</strong></td>
                         <td><strong>Kategorie</strong></td>
