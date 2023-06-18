@@ -405,3 +405,9 @@ a{
     border-radius: 15px;
     border-color: #ffffff00;
 }
+tr{
+    height: 50px;
+}
+.mobile{
+    padding: 20px;
+}
