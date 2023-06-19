@@ -233,6 +233,7 @@ a{
     }
     .blog-img-element{
         width: 90%;
+        max-width: 100%;
     }
     .center-container{ 
         width: 95%;
@@ -324,6 +325,7 @@ a{
     border-color: rgba(255, 255, 255, 0);
     max-height: 400px;
     object-fit: contain;
+    max-width: 90%;
   }
   .blog-text-container{
     width: 100%;
