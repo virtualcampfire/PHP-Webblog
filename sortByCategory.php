@@ -2,6 +2,7 @@
 include('config.php');
 include('navbar.php');
 $category = $_GET['category'];
+$heckCategory = $category;
 $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 if($category == "Alle"){
     $sql = "SELECT * FROM blog";
@@ -29,9 +30,17 @@ $blogEntriesCategory = $result->fetchAll(PDO::FETCH_ASSOC);
         <div class="categories">
             <?php
                 $uniqueCategories = array_unique(array_column($blogEntriesCategory, 'category'));
-                echo '<div class="category" onclick=sortCategory(' . '"' . 'Alle' . '"' . ')>' . 'Alle' . '</div>';
+                echo '<div class="category"';
+                if($category == "Alle"){
+                    echo 'style="color: green;"';
+                }
+                echo 'onclick=sortCategory(' . '"' . 'Alle' . '"' . ')>' . 'Alle' . '</div>';
                 foreach ($uniqueCategories as $category) {
-                    echo '<div class="category" onclick=sortCategory(' . '"' .$category . '"' . ')>' . $category . '</div>';
+                    echo '<div class="category"';
+                    if($category == $heckCategory){
+                        echo 'style="color: green;"';
+                    }
+                    echo 'onclick=sortCategory(' . '"' .$category . '"' . ')>' . $category . '</div>';
                 }
             ?>
         </div>
