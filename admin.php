@@ -58,7 +58,10 @@ echo "
             <title>Admin</title>
         </head>
         <body>
-            
+            <br>
+            <br>
+            <br>
+            <br>
         </body>
     </html> 
 <?php
