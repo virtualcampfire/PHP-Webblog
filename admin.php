@@ -1,6 +1,6 @@
 <?php
 include('loginWatcher.php');
-include('blogInfos.php');
+include('conf/blogInfos.php');
 echo "
     <link rel='stylesheet' href='css/app.css'>
     <div id='fullscreen-overlay'></div>

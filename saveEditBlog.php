@@ -5,7 +5,7 @@ $title = $_POST['title'];
 $text = $_POST['text'];
 $image = $_FILES['image'];
 $category = $_POST['category'];
-include('config.php');
+include('conf/config.php');
 $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
 if(!empty($title)){

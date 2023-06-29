@@ -1,7 +1,7 @@
 <?php
 $id = $_POST['id'];
 
-include('config.php');
+include('conf/config.php');
 $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 $sql = "SELECT * FROM blog WHERE id = '$id'";
 $result = $db->query($sql);

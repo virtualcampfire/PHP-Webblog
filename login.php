@@ -7,7 +7,7 @@ if(isset($_SESSION['loggedIn'])){
     }
 }
 else{
-    include('config.php');
+    include('conf/config.php');
     $getName = $_POST['name'];
     $getPassword = $_POST['password'];
     $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

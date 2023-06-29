@@ -12,7 +12,7 @@ if (!empty($title) && !empty($text) && $image['error'] === 0) {
     $uploadedFilePath = $uploadDir . $uniqueFileName;
     
     if (move_uploaded_file($image['tmp_name'], $uploadedFilePath)) {
-        include('config.php');
+        include('conf/config.php');
         $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $sql = "INSERT INTO blog (title, text, img_path, category) VALUES ('$title', '$text', '$uploadedFilePath', '$category')";
         $db->exec($sql);

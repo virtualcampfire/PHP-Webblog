@@ -1,7 +1,7 @@
 <?php
 include('admin.php');
 $id = $_GET['id'];
-include('config.php');
+include('conf/config.php');
 $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 $sql = "SELECT * FROM blog WHERE id = '$id'";
 $result = $db->query($sql);
