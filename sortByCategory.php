@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+include('conf/config.php');
 include('navbar.php');
 $category = $_GET['category'];
 $heckCategory = $category;

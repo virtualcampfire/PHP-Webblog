@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+include('conf/config.php');
 $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 $sql = "SELECT * FROM blog";
 $result = $db->query($sql);

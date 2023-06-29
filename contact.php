@@ -1,5 +1,5 @@
 <?php 
-include('blogInfos.php');
+include('conf/blogInfos.php');
 echo "
     <!DOCTYPE html>
     <html lang='en'>

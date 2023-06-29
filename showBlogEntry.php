@@ -1,6 +1,6 @@
 <?php
 include('navbar.php');
-include('config.php');
+include('conf/config.php');
 
 $id = $_GET['id'];
 $id = $_GET['id'];

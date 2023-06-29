@@ -7,7 +7,7 @@ $pw2 = $_POST['pw2'];
 
 $id = $_SESSION['userId'];
 
-include('config.php');
+include('conf/config.php');
 $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
 if($name !== null && $name !== ""){
