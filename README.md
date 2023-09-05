@@ -10,7 +10,7 @@
 
 4. Move the project files to your web server.
 
-5. Access www.your-domain.com/migration.php in your web browser.
+5. Access www.your-domain.com/conf/migration.php in your web browser.
 
 6. Once the migration is complete, the migration.php file deletes itself from from the web server.
 
